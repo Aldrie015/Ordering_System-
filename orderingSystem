@@ -1,0 +1,316 @@
+#include <iostream>
+using namespace std;
+
+int drinks, mealNo, mealQuantity, drinkQuantity, meals;
+string yourDrinks, yourOrder;
+float mealPrice, drinkPrice, mealTotal, drinkTotal, total;
+
+
+void JolliMenu() {
+    cout << "WELCOME TO JOLIIT\n\n";
+    cout << "\t\t[1] Chicken" << endl;
+    cout << "\t\t[2] Burger" << endl;
+    cout << "\t\t[3] Jolly Spaghetti" << endl;
+    cout << "\t\t[4] Dessert" << endl;
+}
+void chickenMeals() {
+    cout<< "\t\t[1] 1pc Chickenjoy              - ₱82.00\n";
+    cout<< "\t\t[2] 2pc Chickenjoy              - ₱163.00\n";
+    cout<< "\t\t[3] 1pc Chickenjoy with Fries   - ₱123.50\n";
+    cout<< "\t\t[4] 6pc Chickenjoy Bucket Solo  - ₱435.00\n";
+}
+void burgerMeals() {
+    cout << "\t\t[1] Yumburger            - ₱40.00\n";
+    cout << "\t\t[2] Cheesy Yumburger     - ₱68.00\n";
+    cout << "\t\t[3] Bacon Cheesy Burger  - ₱91.00\n";
+    cout << "\t\t[4] Champ                - ₱168.00\n";
+}
+void spaghettiMeals() {
+    cout<< "\t\t[1] Jolly Spaghetti                    - ₱59.00\n";
+    cout<< "\t\t[2] Jolly Spaghetti with Yumburger     - ₱127.00\n";
+    cout<< "\t\t[3] Jolly Spaghetti with Fries         - ₱120.00 \n";
+    cout<< "\t\t[4] Jolly Spaghetti with Burger Steak  - ₱120.00\n";
+}
+void DessertMeals() {
+    cout << "\t\t[1] Chocolate Sundae Twirl  - ₱48.00" << endl;
+    cout << "\t\t[3] Peach Mango Pie         - ₱48.00" << endl;
+    cout << "\t\t[2] Large Peach Mango Pie   - ₱63.00" << endl;
+    cout << "\t\t[4] 3 Pies To-Go            - ₱138.00" << endl;
+}
+void Drinks() {
+    cout <<"\t\t[1] Water           - P10\n";
+    cout <<"\t\t[2] Coke            - P27\n";
+    cout <<"\t\t[3] Sprite          - P27\n";
+    cout <<"\t\t[4] Iced Chocolate  - P27\n" << endl;
+}
+void drinksSelection() {
+    cout << "Choose your Drink: ";
+    cin >> drinks;
+    if(drinks == 1) {
+        yourDrinks = "Water";
+        drinkPrice = 10.00;
+        cout << "Quantity: ";
+        cin >> drinkQuantity;
+        
+        //Order Review
+        mealTotal = mealPrice * mealQuantity;
+        drinkTotal = drinkPrice * drinkQuantity;
+        total = (mealPrice * mealQuantity) + (drinkPrice * drinkQuantity);
+
+        cout << endl << "Review Order: " << endl;
+        cout << "\tMeals: " << yourOrder << " x " << mealQuantity << "     - ₱" << mealTotal << endl;
+        cout << "\tDrinks: " << yourDrinks << " x " << drinkQuantity << "    -P" << drinkTotal << endl;
+
+        cout << "\n\tTOTAL: ₱ " << total << ".00" << endl;
+
+    }
+    else if(drinks == 2) {
+        yourDrinks = "Coke";
+        drinkPrice = 27.00;
+        cout << "Quantity: ";
+        cin >> drinkQuantity;
+        
+        //Order Review 
+        mealTotal = mealPrice * mealQuantity;
+        drinkTotal = drinkPrice * drinkQuantity;
+        total = (mealPrice * mealQuantity) + (drinkPrice * drinkQuantity);
+
+        cout << endl << "Review Order: " << endl;
+        cout << "\tMeals: " << yourOrder << " x " << mealQuantity << "     - ₱" << mealTotal << endl;
+        cout << "\tDrinks: " << yourDrinks << " x " << drinkQuantity << "    -P" << drinkTotal << endl;
+
+        cout << "\n\tTOTAL: ₱ " << total << ".00" << endl;
+
+        
+    }
+    else if(drinks == 3) {
+        yourDrinks = "Sprite";
+        drinkPrice = 27.00;
+        cout << "Quantity: ";
+        cin >> drinkQuantity;
+        
+        //Order Review 
+        mealTotal = mealPrice * mealQuantity;
+        drinkTotal = drinkPrice * drinkQuantity;
+        total = (mealPrice * mealQuantity) + (drinkPrice * drinkQuantity);
+
+        cout << endl << "Review Order: " << endl;
+        cout << "\tMeals: " << yourOrder << " x " << mealQuantity << "     - ₱" << mealTotal << endl;
+        cout << "\tDrinks: " << yourDrinks << " x " << drinkQuantity << "    -P" << drinkTotal << endl;
+
+        cout << "\n\tTOTAL: ₱ " << total << ".00" << endl;
+
+    }
+    else if(drinks == 4) {
+        yourDrinks = "Iced Chocolate";
+        drinkPrice = 37.00;
+        cout << "Quantity: ";
+        cin >> drinkQuantity;
+        
+        //Order Review 
+        mealTotal = mealPrice * mealQuantity;
+        drinkTotal = drinkPrice * drinkQuantity;
+        total = (mealPrice * mealQuantity) + (drinkPrice * drinkQuantity);
+
+        cout << endl << "Review Order: " << endl;
+        cout << "\tMeals: " << yourOrder << " x " << mealQuantity << "     - ₱" << mealTotal << endl;
+        cout << "\tDrinks: " << yourDrinks << " x " << drinkQuantity << "    -P" << drinkTotal << endl;
+
+        cout << "\n\tTOTAL: ₱ " << total << ".00" << endl;
+
+    }
+    else {
+        cout << "Invalid input, please try again." << endl;
+    }
+
+}
+
+
+int main()
+{
+    JolliMenu();
+    cout << endl;
+    cout<< "Select Meal: ";
+    cin >> mealNo;
+
+    if(mealNo == 1) {
+        cout << endl << endl;
+        chickenMeals();
+
+        cout << "\nSelect your Order: ";
+        cin >> meals;
+        cout << endl;
+
+        if (meals == 1) {
+            yourOrder = "1pc Manok";
+            mealPrice = 82.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            cout << endl << endl;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 2) {
+            yourOrder = "2pc Chickenjoy";
+            mealPrice = 163.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 3) {
+            yourOrder = "1pc Chickenjoy with Fries";
+            mealPrice = 123.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 4) {
+            yourOrder = "6pc Chickenjoy Bucket Solo";
+            mealPrice = 435.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else {
+            cout << "\t\tInval input, please try again.";
+        }
+
+    } else if (mealNo == 2) {
+
+        burgerMeals();
+        cout << "Select your Order: ";
+        cin >> meals;
+        cout << endl;
+
+        if(meals == 1) {
+            yourOrder = "Yumburger";
+            mealPrice = 40.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 2) {
+            yourOrder = "Cheesy Yumburger";
+            mealPrice = 68.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 3) {
+            yourOrder = "Bacon Cheesy Burger";
+            mealPrice = 91.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 4) {
+            yourOrder = "Champ";
+            mealPrice = 168.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else {
+            cout << "\t\tInval input, please try again.";
+        }
+
+    } else if (mealNo == 3) {
+
+        spaghettiMeals();
+        cout << "Select your Order: ";
+        cin >> meals;
+        cout << endl;
+
+        if(meals == 1) {
+            yourOrder = "Jolly Spaghetti";
+            mealPrice = 59.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 2) {
+            yourOrder = "Spaghetti with Yumburger";
+            mealPrice = 127.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 3) {
+            yourOrder = "Spaghetti with Fries";
+            mealPrice = 120.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 4) {
+            yourOrder = "Spaghetti with Burger Streak";
+            mealPrice = 120.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else {
+            cout << "\t\tInval input, please try again.";
+        }
+
+    } else if (mealNo == 4) {
+
+        DessertMeals();
+        cout << "Select your Order: ";
+        cin >> meals;
+        cout << endl;
+
+        if(meals == 1) {
+            yourOrder = "Chocolate Sundae Twirl";
+            mealPrice = 48.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 2) {
+            yourOrder = "Peach Mango Pie";
+            mealPrice = 48.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 3) {
+            yourOrder = "Large Peach Mango Pie";
+            mealPrice = 63.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else if (meals == 4) {
+            yourOrder = "3 Pies to-Go";
+            mealPrice = 138.00;
+            cout << "Quantity: ";
+            cin >> mealQuantity;
+            Drinks();
+            drinksSelection();
+            
+        } else {
+            cout << "\t\tIvalid input,eplease try again.";
+        }
+
+    } else {
+
+        cout << "Inval input, please try again." << endl;
+    }
+
+    return 0;
+}
